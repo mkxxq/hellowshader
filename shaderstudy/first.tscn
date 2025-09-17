@@ -1,0 +1,98 @@
+[gd_scene load_steps=22 format=3 uid="uid://cp37cb6r1sgbd"]
+
+[ext_resource type="Shader" uid="uid://dsuqafm257heu" path="res://shaderstudy/01.gdshader" id="1_5ncbd"]
+[ext_resource type="Shader" uid="uid://cy84n6flnj0ju" path="res://shaderstudy/05.gdshader" id="1_7eh8j"]
+[ext_resource type="Texture2D" uid="uid://ngtl53wjiwg5" path="res://icon.svg" id="2_r3e3v"]
+[ext_resource type="Shader" uid="uid://d0mmgfm0sh4yg" path="res://shaderstudy/02.gdshader" id="3_g635r"]
+[ext_resource type="Shader" uid="uid://ibtnxy0ell4x" path="res://shaderstudy/04.gdshader" id="3_r3e3v"]
+[ext_resource type="Shader" uid="uid://3eovc54v4knu" path="res://shaderstudy/dynamicgradient.gdshader" id="6_g635r"]
+[ext_resource type="Shader" uid="uid://ds1dotmd3vose" path="res://shaderstudy/03.gdshader" id="6_qpayu"]
+[ext_resource type="Shader" uid="uid://cv3ny4k0mhi7h" path="res://shaderstudy/06.gdshader" id="8_qpayu"]
+[ext_resource type="Shader" uid="uid://drohssbfocc8p" path="res://shaderstudy/07.gdshader" id="9_ih3no"]
+[ext_resource type="Shader" uid="uid://4qkmdlikhv1c" path="res://shaderstudy/tan.gdshader" id="10_bvh52"]
+[ext_resource type="Shader" uid="uid://46tdonp3gjem" path="res://shaderstudy/08.gdshader" id="11_2t5ud"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ih3no"]
+shader = ExtResource("1_5ncbd")
+shader_parameter/offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bvh52"]
+shader = ExtResource("3_g635r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2t5ud"]
+shader = ExtResource("6_qpayu")
+shader_parameter/resolution = Vector2(0, 0)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_l873t"]
+shader = ExtResource("3_r3e3v")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qpayu"]
+shader = ExtResource("6_g635r")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3e3v"]
+shader = ExtResource("1_7eh8j")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nhe5s"]
+shader = ExtResource("8_qpayu")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7asxo"]
+shader = ExtResource("9_ih3no")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60pvi"]
+shader = ExtResource("10_bvh52")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_y5tyq"]
+shader = ExtResource("11_2t5ud")
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(448, 246)
+
+[node name="01color" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ih3no")
+position = Vector2(-240, -6)
+texture = ExtResource("2_r3e3v")
+
+[node name="02dynamiccolor" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_bvh52")
+position = Vector2(-96, -6)
+texture = ExtResource("2_r3e3v")
+
+[node name="03Gradient" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_2t5ud")
+position = Vector2(48, -6)
+texture = ExtResource("2_r3e3v")
+
+[node name="04line" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_l873t")
+position = Vector2(192, -6)
+texture = ExtResource("2_r3e3v")
+
+[node name="DynamicGradient" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_qpayu")
+position = Vector2(48, -150)
+texture = ExtResource("2_r3e3v")
+
+[node name="05pow" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_r3e3v")
+position = Vector2(336, -6)
+texture = ExtResource("2_r3e3v")
+
+[node name="06step" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_nhe5s")
+position = Vector2(480, -6)
+texture = ExtResource("2_r3e3v")
+
+[node name="07smoothstep" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_7asxo")
+position = Vector2(632, -6)
+texture = ExtResource("2_r3e3v")
+
+[node name="tan" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_60pvi")
+position = Vector2(776, -6)
+texture = ExtResource("2_r3e3v")
+
+[node name="08mixcolor" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_y5tyq")
+position = Vector2(-240, 138)
+texture = ExtResource("2_r3e3v")
