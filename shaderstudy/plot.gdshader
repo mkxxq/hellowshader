@@ -1,13 +1,12 @@
 shader_type canvas_item;
 
+#include "res://shaderstudy/plot.gdshaderinc"
+
 uniform vec2 size = vec2(128,128);
 
 void vertex() {
 	// Called for every vertex the material is visible on.
 }
-//float plot(vec2 st, float y){
-	//return smoothstep(y-0.005,y,st.y)-smoothstep(y,y+0.005,st.y);
-//}
 float yfunc(float x){
 	return tan(x * PI) / PI;
 }
@@ -26,7 +25,7 @@ void fragment() {
 		//COLOR.rgb = vec3(1,1,1);
 	//}
 	//float t = smoothstep(0,0.01,abs(st.y -y)) ;
-	float t = smoothstep(y -0.005, y,st.y ) - smoothstep(y  , y+0.005,st.y );
+	float t =  smoothstep(y -0.005, y,st.y ) - smoothstep(y  , y+0.005,st.y );
 	//color = mix(color,vec3(0,1,0),t);
 	color = mix(color,vec3(0,1,0),t);
 	COLOR.rgb = color;
